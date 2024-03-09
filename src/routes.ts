@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Application } from 'express';
-// import { authRoutes } from '@auth/routes/authRoutes';
+import { authRoutes } from '@auth/routes/authRoutes';
 // import { serverAdapter } from '@service/queues/base.queue';
 // import { currentUserRoutes } from '@auth/routes/currentRoutes';
 // import { authMiddleware } from '@global/helpers/auth-middleware';
@@ -23,7 +23,7 @@ export default (app: Application) => {
     // app.use('', healthRoutes.env());
     // app.use('', healthRoutes.instance());
     // app.use('', healthRoutes.fiboRoutes());
-    // app.use(BASE_PATH, authRoutes.routes());
+    app.use(BASE_PATH, authRoutes.routes());
     // app.use(BASE_PATH, authRoutes.signoutRoute());
     // app.use(BASE_PATH, authMiddleware.verifyUser, currentUserRoutes.routes());
     // app.use(BASE_PATH, authMiddleware.verifyUser, postRoutes.routes());
