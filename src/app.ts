@@ -18,7 +18,7 @@ class Application {
 
   private loadConfig(): void {
     config.validateConfig();
-    // config.cloudinaryConfig();
+    config.cloudinaryConfig();
   }
 
   private static handleExit(): void {
